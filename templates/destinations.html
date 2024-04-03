@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('8webp.jpg'); 
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .destination-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .destination {
+            width: 300px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            text-align: center;
+        }
+        .destination img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .destination h2 {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-size: 20px;
+        }
+        .destination p {
+            margin: 0;
+            padding: 10px 0;
+            text-align: justify;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .choose-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ffffff;
+            color: #000000;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .choose-button:hover {
+            background-color: #cccccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="destination-container">
+        <div class="destination">
+            <img src="../static/england.jpg" alt="United Kingdom">
+            <h2>England</h2>
+            <p>England is a captivating destination that seamlessly blends rich history, diverse culture, and stunning natural beauty. Whether you’re drawn to cosmopolitan cities, rolling countryside, or rugged coastlines, England has something to offer. Explore iconic landmarks like the Tower Bridge and Big Ben in London, immerse yourself in the vibrant cultural scene, and savor diverse cuisines. Manchester, known for its world-class football and music scene, offers attractions like the John Rylands Library and the Manchester Art Gallery. Bristol, a hub of creativity, beckons with street art and historic landmarks. Scotland’s capital, Edinburgh, boasts palaces, cobbled alleys, and a dormant volcano. Brighton, a quirky seaside city, tempts with diverse cuisine and vintage shopping. Liverpool, a UNESCO City of Music, celebrates its musical heritage. Cardiff, in South Wales, combines castles, rugby, and myths. England invites you to explore its diverse and captivating destinations!</p>
+        </div>
+        <div class="destination">
+            <img src="../static/usamerica.jpg" alt="United States">
+            <h2>United States</h2>
+            <p>The United States is a vast and diverse country that offers something for every traveler. Whether you want to explore the stunning natural wonders of national parks like Glacier, Grand Canyon, and Yosemite, or enjoy the vibrant culture and cuisine of cities like New York, San Francisco, and New Orleans, you will find plenty of options to suit your interests.</p>
+        </div>
+        <div class="destination">
+            <img src="../static/milano.jpg" alt="Italy">
+            <h2>Italy</h2>
+            <p>Italy, a dream destination for travelers, seamlessly combines art, culture, and cuisine. Whether you want to admire the ancient wonders of Rome, cruise the romantic canals of Venice, or explore the fashion capital of Milan, Italy has something for everyone. The stunning scenery of the Amalfi Coast, the rolling hills of Tuscany, and the snowy peaks of the Alps add to its allure. Italy is a feast for the senses, with its rich history, vibrant colors, and delicious flavors. </p>
+        </div>
+        <div class="destination">
+            <img src="../static/paris.jpg" alt="France">
+            <h2>France</h2>
+            <p>France, a country that charms travelers with its diverse and captivating attractions, seamlessly blends history, culture, and culinary delights. Whether you’re drawn to the iconic Eiffel Tower, the world-class art of the Centre Pompidou, or the romantic café terraces, you’ll find something to love in France. Explore the rich history and culture of cities like Paris, Marseille, and Lyon, or discover the stunning landscapes and villages of the countryside, from Provence to Normandy. </p>
+        </div>
+        <div class="destination">
+            <img src="../static/alger.jpg" alt="Algeria">
+            <h2>Algeria</h2>
+            <p>Algeria is the largest country in Africa; one of the main tourist attractions is the Sahara, the largest desert in the world.Algeria benefits from important natural assets such as its beaches in general still in the wild, landscapes and zones like the Algerian Desert. There are 10 national parks in Algeria, including the Tassili Cultural Park (100,000 ha) or the Ahaggar Cultural Park (Hoggar) (380,000 ha)
+
+                Hiking enthusiasts have access to the vast mountains of Kabylia. Despite what is thought, Algeria also has a ski area in Tikjda as well as spas</p>
+        </div>
+        <div class="destination">
+            <img src="../static/spain.webp" alt="Spain">
+            <h2>Spain</h2>
+            <p>Spain, a country of rich history and diverse landscapes, occupies most of the Iberian Peninsula. From the Meseta plateau to the Andalusian flamenco culture, Spain’s story unfolds through ancient civilizations, Moorish rule, and the Age of Exploration. Its artistic legacy includes Cervantes, García Lorca, and vibrant fiestas. Today, Spain thrives as a modern nation with cities like Madrid.</p>
+        </div>
+        <div class="destination">
+            <img src="../static/japan.webp" alt="japan">
+            <h2>japan</h2>
+            <p>Japan, an island country off Asia’s east coast, spans about 1,500 miles across the western North Pacific Ocean. Its history includes ancient Jōmon and Yayoi periods, imperial rule, and cultural exchange with China and Korea. Japan’s resilience and dynamic culture continue to captivate the world.</p>
+        </div>
+    </div>
+
+    <button class="choose-button" onclick="redirectToForm()">Choose Your Destination</button>
+
+    <script>
+        function redirectToForm() {
+            window.location.href = "{{ url_for('form') }}"; 
+        }
+    </script>
+</body>
+</html>

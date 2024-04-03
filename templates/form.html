@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination Form</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('../static/9.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        form {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
+        }
+        input[type="text"], input[type="date"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <header>Registration Form</header>
+        <form class="form" action="#">
+            <div class="input-box">
+                <label>Full Name</label>
+                <input required="" placeholder="Enter full name" type="text">
+            </div>
+            <div class="column">
+                <div class="input-box">
+                  <label>Phone Number</label>
+                  <input required="" placeholder="Enter phone number" type="tel">
+                </div>
+                <div class="input-box">
+                  <label>Birth Date</label>
+                  <input required="" placeholder="Enter birth date" type="date">
+                </div>
+            </div>
+            <div class="gender-box">
+              <label>Gender</label>
+              <div class="gender-option">
+                <div class="gender">
+                  <input checked="" name="gender" id="check-male" type="radio">
+                  <label for="check-male">Male</label>
+                </div>
+                <div class="gender">
+                  <input name="gender" id="check-female" type="radio">
+                  <label for="check-female">Female</label>
+                </div>
+                <div class="gender">
+                  <input name="gender" id="check-other" type="radio">
+                  <label for="check-other">Prefer not to say</label>
+                </div>
+              </div>
+            </div>
+            <div class="input-box">
+              <label>Chosen Destination</label>
+              <select required="">
+                <option hidden="">Select Destination</option>
+                <option>England</option>
+                <option>United States</option>
+                <option>Italy</option>
+                <option>France</option>
+                <option>Algeria</option>
+                <option>japan</option>
+                <option>Spain</option>
+
+              </select>
+            </div>
+            <div class="input-box">
+              <label>Activities</label>
+              <select multiple required="">
+                <option hidden="">Select Activities</option>
+                <option>Beach</option>
+                <option>Museum</option>
+                <option>Skiing</option>
+                <option>Furry Tour</option>
+              </select>
+            </div>
+            <button>Submit</button>
+        </form>
+      </section>
+      
+</body>
+</html>

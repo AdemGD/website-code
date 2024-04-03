@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ destination_name }} Trip Plan</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+        }
+        .content {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            margin: 50px auto;
+            max-width: 800px;
+            border-radius: 10px;
+            z-index: 1;
+        }
+        .content h2 {
+            margin-top: 20px;
+        }
+        .content p {
+            margin-bottom: 10px;
+        }
+        .content ol {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay loop muted>
+        <source src="https://www.youtube.com/embed/NKyC-SS9pvU?autoplay=1&loop=1&playlist=NKyC-SS9pvU&controls=0&showinfo=0&modestbranding=1" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="content">
+        <h1>{{ destination_name }} Trip Plan</h1>
+        <h2>7 Days in London: The Best One Week Itinerary + Where to Stay</h2>
+        <h3>How to avoid waiting in line (and save a lot of time!) at London’s tourist attractions</h3>
+        <ol>
+            <li>The London Pass</li>
+            <li>Skip-the-line tickets for London’s tourist attractions</li>
+        </ol>
+        <h2>7 Days in London: Must-See Attractions</h2>
+        <p>One Last Tip for a Perfect 7-Day Stay in London</p>
+        <h3>A week in London: the best itinerary</h3>
+        <h4>Day 1 – The historic centre</h4>
+        <ol>
+            <li>Big Ben</li>
+            <li>Westminster Abbey</li>
+            <li>Buckingham Palace and the Changing of the Royal Guard</li>
+            <li>Trafalgar Square & National Gallery museum</li>
+            <li>London Eye</li>
+            <li>Tate Britain and/or Tate Modern Museum</li>
+        </ol>
+        <h4>Day 2 – Best things to do in London</h4>
+        <ol>
+            <li>St. Paul’s Cathedral</li>
+            <li>The City</li>
+            <li>The Tower of London</li>
+            <li>Tower Bridge</li>
+            <li>The Shard</li>
+        </ol>
+        <h4>Day 3 – Landmarks to visit in London</h4>
+        <ol>
+            <li>Notting Hill and Portobello Market</li>
+            <li>The Natural History Museum</li>
+            <li>Hyde Park</li>
+            <li>Shopping on Oxford Street</li>
+            <li>Soho</li>
+            <li>Piccadilly Circus</li>
+            <li>Covent Garden</li>
+        </ol>
+        <h4>Day 4: exploring other districts of London</h4>
+        <ol>
+            <li>Hampstead Village</li>
+            <li>Camden Town</li>
+            <li>Regent’s Park</li>
+            <li>Abbey Road (optional)</li>
+            <li>Madame Tussauds or the British Museum</li>
+        </ol>
+        <h4>Day 5: Greenwich</h4>
+        <h4>Day 6 – Visit to Harry Potter Studios</h4>
+        <h4>Day 7: Last day in or around London</h4>
+        <ol>
+            <li>Option 1: Day trips around London</li>
+            <li>Option 2: Visit the city of London for one more day</li>
+        </ol>
+        <h3>Where to stay in London</h3>
+        <h3>London in one week with your family</h3>
+        <h3>Map of your 7-day itinerary in London</h3>
+        <h3>Find the best flight prices for your 7 days in London</h3>
+    </div>
+</body>
+</html>
