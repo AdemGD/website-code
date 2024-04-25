@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ destination_name }} Trip Plan</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1000;
+            background-size: cover;
+        }
+
+        .content {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            margin: 20px;
+            max-width: 80%;
+            max-height: 80%;
+            border-radius: 10px;
+            z-index: 1;
+            position: relative;
+            overflow: auto;
+        }
+
+        .content h1 {
+            font-size: 1.5rem;
+        }
+
+        .content h2 {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        .content h3 {
+            font-size: 1rem;
+        }
+
+        .content h4 {
+            font-size: 0.9rem;
+        }
+
+        .content p {
+            font-size: 0.8rem;
+            margin-bottom: 5px;
+        }
+
+        .content ol {
+            font-size: 0.8rem;
+            margin-left: 20px;
+        }
+        .choose-button {
+             background-color: #007bff; /* Blue color */
+             border: none;
+             color: white;
+             padding: 15px 25px; /* Increase padding for bigger button */
+              text-align: center;
+             text-decoration: none;
+            display: inline-block;
+             font-size: 16px;
+             margin: 4px 2px;
+              cursor: pointer;
+             border-radius: 8px; /* Rounded corners */
+            transition-duration: 0.4s; /* Smooth transition on hover */
+        }
+
+        .choose-button:hover {
+             background-color: #0056b3; /* Darker blue color on hover */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="title">
+        <h1>Welcome to France</h1>
+    </div>
+    <video autoplay loop muted plays-inline class="background-video">
+        <source src="../static/france.mp4" type="video/mp4">
+    </video>
+    <div class="content">
+        <h1>{{ destination_name }} Trip Plan</h1>
+        <h2>7 Days in France: The Best One Week Itinerary + Where to Stay</h2>
+        <h3>How to avoid waiting in line (and save a lot of time!) at France's tourist attractions</h3>
+        <ol>
+            <li>The Paris Pass</li>
+            <li>Skip-the-line tickets for France's tourist attractions</li>
+        </ol>
+        <h2>7 Days in France: Must-See Attractions</h2>
+        <p>One Last Tip for a Perfect 7-Day Stay in France</p>
+        <h3>A week in France: the best itinerary</h3>
+        <h4>Day 1 – The historic center of Paris</h4>
+        <ol>
+            <li>Eiffel Tower</li>
+            <li>Louvre Museum</li>
+            <li>Notre-Dame Cathedral</li>
+            <li>Musée d'Orsay</li>
+            <li>Champs-Élysées and Arc de Triomphe</li>
+            <li>Sainte-Chapelle</li>
+        </ol>
+        <h4>Day 2 – Exploring Montmartre</h4>
+        <ol>
+            <li>Basilique du Sacré-Cœur</li>
+            <li>Montmartre Village</li>
+            <li>Moulin Rouge</li>
+        </ol>
+        <h4>Day 3 – Discovering Versailles</h4>
+        <ol>
+            <li>Palace of Versailles</li>
+            <li>Marie-Antoinette's Estate</li>
+            <li>Versailles Gardens</li>
+        </ol>
+        <h4>Day 4: Exploring the French Riviera</h4>
+        <ol>
+            <li>Nice</li>
+            <li>Monaco</li>
+            <li>Cannes</li>
+        </ol>
+    </div>
+  
+    <button class="choose-button" onclick="redirectToFrance()">See Hotels and Tickets</button>
+
+    <script>
+        // Function to redirect to the france page when clicking on the "See Hotels and Tickets" button
+        function redirectToFrance() {
+            window.location.href = "/france"; // Change the URL to the correct route for the france page
+        }
+    </script>
+</body>
+</html>

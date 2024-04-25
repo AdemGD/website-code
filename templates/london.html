@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>London Travel Deals</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#">Your Travel Agency</a>
+            </div>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Destinations</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Explore London</h1>
+                <p>Discover the best deals on hotels and flights for your London trip.</p>
+            </div>
+        </section>
+        <section>
+            <h2>Hotels</h2>
+            <div class="hotel-list">
+                {% for hotel in hotels %}
+                <div class="hotel-card">
+                    <img src="{{ hotel.image_url }}" alt="{{ hotel.name }}">
+                    <div class="content">
+                        <h3>{{ hotel.name }}</h3>
+                        <p>Price: {{ hotel.price }}</p>
+                        <p>{{ hotel.description }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        <section>
+            <h2>Flight Tickets</h2>
+            <div class="flight-list">
+                {% for flight in flights %}
+                <div class="flight-card">
+                    <h3>{{ flight.airline }} - {{ flight.flight_number }}</h3>
+                    <p>Departure: {{ flight.departure_time }}</p>
+                    <p>Arrival: {{ flight.arrival_time }}</p>
+                    <p>Price: {{ flight.price }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; Your Travel Agency</p>
+        </div>
+    </footer>
+</body>
+</html>
