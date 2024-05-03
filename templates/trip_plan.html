@@ -6,52 +6,102 @@
     <title>{{ destination_name }} Trip Plan</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <style>
-        body, html {
+        body {
             margin: 0;
             padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             overflow: hidden;
         }
-        video {
+
+        .background-video {
             position: fixed;
-            right: 0;
-            bottom: 0;
+            top: 0;
+            left: 0;
             min-width: 100%;
             min-height: 100%;
             width: auto;
             height: auto;
-            z-index: -1;
+            z-index: -1000;
+            background-size: cover;
         }
+
         .content {
             padding: 20px;
             background-color: rgba(255, 255, 255, 0.7);
-            margin: 50px auto;
-            max-width: 800px;
+            margin: 20px;
+            max-width: 80%;
+            max-height: 80%;
             border-radius: 10px;
             z-index: 1;
+            position: relative;
+            overflow: auto;
         }
+
+        .content h1 {
+            font-size: 1.5rem;
+        }
+
         .content h2 {
-            margin-top: 20px;
+            font-size: 1.2rem;
+            margin-top: 10px;
         }
+
+        .content h3 {
+            font-size: 1rem;
+        }
+
+        .content h4 {
+            font-size: 0.9rem;
+        }
+
         .content p {
-            margin-bottom: 10px;
+            font-size: 0.8rem;
+            margin-bottom: 5px;
         }
+
         .content ol {
+            font-size: 0.8rem;
             margin-left: 20px;
         }
+        .choose-button {
+             background-color: #007bff; /* Blue color */
+             border: none;
+             color: white;
+             padding: 15px 25px; /* Increase padding for bigger button */
+              text-align: center;
+             text-decoration: none;
+            display: inline-block;
+             font-size: 16px;
+             margin: 4px 2px;
+              cursor: pointer;
+             border-radius: 8px; /* Rounded corners */
+            transition-duration: 0.4s; /* Smooth transition on hover */
+        }
+
+        .choose-button:hover {
+             background-color: #0056b3; /* Darker blue color on hover */
+        }
+
     </style>
 </head>
 <body>
-    <video autoplay loop muted>
-        <source src="https://www.youtube.com/embed/NKyC-SS9pvU?autoplay=1&loop=1&playlist=NKyC-SS9pvU&controls=0&showinfo=0&modestbranding=1" type="video/mp4">
-        Your browser does not support the video tag.
+    <div class="title">
+        <h1>Welcome to London</h1>
+    </div>
+    <video autoplay loop muted plays-inline class="background-video">
+        <source src="../static/london.mp4" type="video/mp4">
     </video>
     <div class="content">
         <h1>{{ destination_name }} Trip Plan</h1>
         <h2>7 Days in London: The Best One Week Itinerary + Where to Stay</h2>
-        <h3>How to avoid waiting in line (and save a lot of time!) at London’s tourist attractions</h3>
+        <h3>How to avoid waiting in line (and save a lot of time!) at London's tourist attractions</h3>
         <ol>
             <li>The London Pass</li>
-            <li>Skip-the-line tickets for London’s tourist attractions</li>
+            <li>Skip-the-line tickets for London's tourist attractions</li>
         </ol>
         <h2>7 Days in London: Must-See Attractions</h2>
         <p>One Last Tip for a Perfect 7-Day Stay in London</p>
@@ -67,7 +117,7 @@
         </ol>
         <h4>Day 2 – Best things to do in London</h4>
         <ol>
-            <li>St. Paul’s Cathedral</li>
+            <li>St. Paul's Cathedral</li>
             <li>The City</li>
             <li>The Tower of London</li>
             <li>Tower Bridge</li>
@@ -87,21 +137,18 @@
         <ol>
             <li>Hampstead Village</li>
             <li>Camden Town</li>
-            <li>Regent’s Park</li>
+            <li>Regent's Park</li>
             <li>Abbey Road (optional)</li>
             <li>Madame Tussauds or the British Museum</li>
         </ol>
-        <h4>Day 5: Greenwich</h4>
-        <h4>Day 6 – Visit to Harry Potter Studios</h4>
-        <h4>Day 7: Last day in or around London</h4>
-        <ol>
-            <li>Option 1: Day trips around London</li>
-            <li>Option 2: Visit the city of London for one more day</li>
-        </ol>
-        <h3>Where to stay in London</h3>
-        <h3>London in one week with your family</h3>
-        <h3>Map of your 7-day itinerary in London</h3>
-        <h3>Find the best flight prices for your 7 days in London</h3>
     </div>
+    <button class="choose-button" onclick="redirectToLondonUK()">See Hotels and Tickets</button>
+
+    <script>
+        // Function to redirect to the london_uk page when clicking on the "See Hotels and Tickets" button
+        function redirectToLondonUK() {
+            window.location.href = "/london_uk"; // Change the URL to the correct route for the london_uk page
+        }
+    </script>
 </body>
 </html>

@@ -9,7 +9,7 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            background-image: url('8webp.jpg'); 
+            background-image: url('../static/8.webp'); 
             background-size: cover;
             background-position: center;
             color: white;
@@ -70,7 +70,9 @@
 <body>
     <div class="destination-container">
         <div class="destination">
+            <a href="/trip_plan">
             <img src="../static/england.jpg" alt="United Kingdom">
+             </a>
             <h2>England</h2>
             <p>England is a captivating destination that seamlessly blends rich history, diverse culture, and stunning natural beauty. Whether you’re drawn to cosmopolitan cities, rolling countryside, or rugged coastlines, England has something to offer. Explore iconic landmarks like the Tower Bridge and Big Ben in London, immerse yourself in the vibrant cultural scene, and savor diverse cuisines. Manchester, known for its world-class football and music scene, offers attractions like the John Rylands Library and the Manchester Art Gallery. Bristol, a hub of creativity, beckons with street art and historic landmarks. Scotland’s capital, Edinburgh, boasts palaces, cobbled alleys, and a dormant volcano. Brighton, a quirky seaside city, tempts with diverse cuisine and vintage shopping. Liverpool, a UNESCO City of Music, celebrates its musical heritage. Cardiff, in South Wales, combines castles, rugby, and myths. England invites you to explore its diverse and captivating destinations!</p>
         </div>
@@ -85,16 +87,16 @@
             <p>Italy, a dream destination for travelers, seamlessly combines art, culture, and cuisine. Whether you want to admire the ancient wonders of Rome, cruise the romantic canals of Venice, or explore the fashion capital of Milan, Italy has something for everyone. The stunning scenery of the Amalfi Coast, the rolling hills of Tuscany, and the snowy peaks of the Alps add to its allure. Italy is a feast for the senses, with its rich history, vibrant colors, and delicious flavors. </p>
         </div>
         <div class="destination">
+            <a href="/trip_plan2">
             <img src="../static/paris.jpg" alt="France">
+            </a>
             <h2>France</h2>
             <p>France, a country that charms travelers with its diverse and captivating attractions, seamlessly blends history, culture, and culinary delights. Whether you’re drawn to the iconic Eiffel Tower, the world-class art of the Centre Pompidou, or the romantic café terraces, you’ll find something to love in France. Explore the rich history and culture of cities like Paris, Marseille, and Lyon, or discover the stunning landscapes and villages of the countryside, from Provence to Normandy. </p>
         </div>
         <div class="destination">
             <img src="../static/alger.jpg" alt="Algeria">
             <h2>Algeria</h2>
-            <p>Algeria is the largest country in Africa; one of the main tourist attractions is the Sahara, the largest desert in the world.Algeria benefits from important natural assets such as its beaches in general still in the wild, landscapes and zones like the Algerian Desert. There are 10 national parks in Algeria, including the Tassili Cultural Park (100,000 ha) or the Ahaggar Cultural Park (Hoggar) (380,000 ha)
-
-                Hiking enthusiasts have access to the vast mountains of Kabylia. Despite what is thought, Algeria also has a ski area in Tikjda as well as spas</p>
+            <p>Algeria is the largest country in Africa; one of the main tourist attractions is the Sahara, the largest desert in the world. Algeria benefits from important natural assets such as its beaches in general still in the wild, landscapes and zones like the Algerian Desert. There are 10 national parks in Algeria, including the Tassili Cultural Park (100,000 ha) or the Ahaggar Cultural Park (Hoggar) (380,000 ha). Hiking enthusiasts have access to the vast mountains of Kabylia. Despite what is thought, Algeria also has a ski area in Tikjda as well as spas.</p>
         </div>
         <div class="destination">
             <img src="../static/spain.webp" alt="Spain">
@@ -103,17 +105,24 @@
         </div>
         <div class="destination">
             <img src="../static/japan.webp" alt="japan">
-            <h2>japan</h2>
+            <h2>Japan</h2>
             <p>Japan, an island country off Asia’s east coast, spans about 1,500 miles across the western North Pacific Ocean. Its history includes ancient Jōmon and Yayoi periods, imperial rule, and cultural exchange with China and Korea. Japan’s resilience and dynamic culture continue to captivate the world.</p>
         </div>
     </div>
-
+    
     <button class="choose-button" onclick="redirectToForm()">Choose Your Destination</button>
-
+    
     <script>
+         // Function to redirect to trip plan page when the user clicks on the England destination
+         document.getElementById("england-destination").addEventListener("click", function() {
+            window.location.href = "/trip_plan"; // Change the URL to the correct route for the trip plan page
+        });
+        
+        // Function to redirect to the form page when the user clicks on the "Choose Your Destination" button
         function redirectToForm() {
-            window.location.href = "{{ url_for('form') }}"; 
+            window.location.href = "{{ url_for('form') }}"; // Change the URL to the correct route for the form page
         }
     </script>
+    
 </body>
 </html>

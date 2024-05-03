@@ -94,19 +94,18 @@
 
               </select>
             </div>
-            <div class="input-box">
-              <label>Activities</label>
-              <select multiple required="">
-                <option hidden="">Select Activities</option>
-                <option>Beach</option>
-                <option>Museum</option>
-                <option>Skiing</option>
-                <option>Furry Tour</option>
-              </select>
-            </div>
+            
             <button>Submit</button>
         </form>
       </section>
+      <script>
+        document.getElementById('RegistrationForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Redirect to success page
+            window.location.href = 'submission.html';
+        });
+    </script>
       
 </body>
 </html>
