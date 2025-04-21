@@ -1,8 +1,9 @@
-Flask==2.0.2                     # Micro web framework for Python
-Flask-WTF==0.15.1                # Flask integration with WTForms for handling forms
-Flask-Login==0.5.0               # User session management for Flask
-Flask-SQLAlchemy==2.5.0          # SQLAlchemy integration with Flask for database management
-Flask-Migrate==3.1.0             # SQLAlchemy database migrations for Flask applications
-Flask-Mail==0.9.1                # SMTP email support for Flask
-WTForms==3.0.0                   # Library for creating web forms in Flask
-SQLAlchemy==1.4.32               # SQL toolkit and Object-Relational Mapping (ORM) for Python
+click==8.0.1
+Flask==2.1.0
+Flask-WTF==0.15.1
+itsdangerous==2.1.0
+Jinja2==3.0.3
+MarkupSafe==2.0.1
+SQLAlchemy==1.4.25
+Werkzeug==2.0.2
+WTForms==3.0.1
